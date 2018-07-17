@@ -18,6 +18,7 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>Name</th>
                             <th>Email Address</th>
                             <th>Mobile Number</th>
@@ -31,6 +32,7 @@
                         $sql = 'SELECT * FROM customers ORDER BY id DESC';
                         foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
+                            echo '<td>' . $row['id'] . '</td>';
                             echo '<td>' . $row['name'] . '</td>';
                             echo '<td>' . $row['email'] . '</td>';
                             echo '<td>' . $row['mobile'] . '</td>';

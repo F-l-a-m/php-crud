@@ -16,6 +16,9 @@
         $data = $q->fetch(PDO::FETCH_ASSOC);
         Database::disconnect();
     }
+    if($q->rowCount() == 0) {
+        header("Location: error.php?id=" . $id);
+    }
 ?>
  
 <!DOCTYPE html>
